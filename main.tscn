@@ -1,8 +1,50 @@
 [gd_scene format=3 uid="uid://b4rdlxrxcbd20"]
 
 [ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://spritetest.tscn" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bjrwnbxw2wogs" path="res://button.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://c20rr4ghb13rr" path="res://button2.gd" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
 [node name="Sprite2D" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
-position = Vector2(555, 301)
+position = Vector2(573, 289)
+scale = Vector2(3.52, 1.3599988)
+
+[node name="Stuff" type="Sprite2D" parent="Sprite2D" unique_id=835215249]
+position = Vector2(-162.78409, -212.50018)
+scale = Vector2(0.2840909, 0.73529476)
+
+[node name="LineEdit" type="LineEdit" parent="Sprite2D/Stuff" unique_id=735412961]
+offset_left = 389.99997
+offset_top = 295.0
+offset_right = 565.4274
+offset_bottom = 340.98563
+scale = Vector2(1.4079897, 1.0676934)
+placeholder_text = "Enter your name"
+max_length = 10
+
+[node name="Label" type="Label" parent="Sprite2D/Stuff" unique_id=869857479]
+offset_left = 392.0
+offset_top = 234.0
+offset_right = 570.0
+offset_bottom = 271.0
+
+[node name="Button" type="Button" parent="Sprite2D/Stuff" unique_id=428326066]
+offset_left = 679.0
+offset_top = 300.0
+offset_right = 733.0
+offset_bottom = 344.0
+text = "Enter"
+script = ExtResource("2_h2yge")
+
+[node name="Button2" type="Button" parent="Sprite2D/Stuff" unique_id=1808717274]
+visible = false
+offset_left = 516.0
+offset_top = 290.0
+offset_right = 593.0
+offset_bottom = 334.0
+text = "contiune"
+script = ExtResource("3_h2yge")
+
+[connection signal="pressed" from="Sprite2D/Stuff/Button" to="Sprite2D/Stuff/Button" method="_on_pressed"]
+[connection signal="pressed" from="Sprite2D/Stuff/Button2" to="Sprite2D/Stuff/Button2" method="_on_pressed"]
