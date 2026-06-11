@@ -11,3 +11,11 @@ texture = ExtResource("1_ig7tw")
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1232669257]
 position = Vector2(575, 333)
 texture = ExtResource("1_ig7tw")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=862471848]
+position = Vector2(185, 270)
+texture = ExtResource("1_ig7tw")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=434218161]
+position = Vector2(900, 573)
+texture = ExtResource("1_ig7tw")
