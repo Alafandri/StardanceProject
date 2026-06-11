@@ -5,5 +5,5 @@
 [node name="Sprite2D" type="Sprite2D" unique_id=683670845]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=2064762682]
-position = Vector2(69, 351)
+position = Vector2(-1, 2)
 texture = ExtResource("1_sxcao")

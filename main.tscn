@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://b4rdlxrxcbd20"]
 
+[ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://spritetest.tscn" id="2_0xm2m"]
+
 [node name="Node2D" type="Node2D" unique_id=414601868]
+
+[node name="Sprite2D" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
+position = Vector2(555, 301)
