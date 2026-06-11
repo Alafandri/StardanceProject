@@ -1,25 +1,9 @@
 [gd_scene format=3 uid="uid://b4rdlxrxcbd20"]
 
 [ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://spritetest.tscn" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=789424355]
-position = Vector2(293, 486)
-texture = ExtResource("1_ig7tw")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1232669257]
-position = Vector2(575, 333)
-texture = ExtResource("1_ig7tw")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=862471848]
-position = Vector2(185, 270)
-texture = ExtResource("1_ig7tw")
-
-[node name="Sprite2D" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
-position = Vector2(741, 37)
-
-[node name="Icon4" type="Sprite2D" parent="." unique_id=1520052357]
-position = Vector2(515, 442)
+[node name="Icon" type="Sprite2D" parent="." unique_id=1996135812]
+position = Vector2(591, 331)
 texture = ExtResource("1_ig7tw")
