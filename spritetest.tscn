@@ -2,8 +2,5 @@
 
 [ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="1_sxcao"]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=683670845]
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=2064762682]
-position = Vector2(-1, 2)
+[node name="Test" type="Sprite2D" unique_id=683670845]
 texture = ExtResource("1_sxcao")

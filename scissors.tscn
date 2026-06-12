@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://7ubum3p1qd8i"]
 
 [ext_resource type="Script" uid="uid://csmeyivlvw767" path="res://scissors.gd" id="1_keus3"]
+[ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="1_xflwj"]
 
 [node name="Scissors" type="Sprite2D" unique_id=1543337738]
+texture = ExtResource("1_xflwj")
 script = ExtResource("1_keus3")
