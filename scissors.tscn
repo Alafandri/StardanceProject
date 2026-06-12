@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://7ubum3p1qd8i"]
+
+[ext_resource type="Script" uid="uid://csmeyivlvw767" path="res://scissors.gd" id="1_keus3"]
+
+[node name="Scissors" type="Sprite2D" unique_id=1543337738]
+script = ExtResource("1_keus3")

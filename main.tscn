@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://spritetest.tscn" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://bjrwnbxw2wogs" path="res://button.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://c20rr4ghb13rr" path="res://button2.gd" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="4_1bvp3"]
 
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
@@ -45,6 +46,10 @@ offset_right = 593.0
 offset_bottom = 334.0
 text = "contiune"
 script = ExtResource("3_h2yge")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=758448961]
+position = Vector2(288, 621)
+texture = ExtResource("4_1bvp3")
 
 [connection signal="pressed" from="Sprite2D/Stuff/Button" to="Sprite2D/Stuff/Button" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/Stuff/Button2" to="Sprite2D/Stuff/Button2" method="_on_pressed"]

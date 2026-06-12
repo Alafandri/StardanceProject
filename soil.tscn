@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d0jaqgideclc0"]
+
+[ext_resource type="Script" uid="uid://dvqfy8mxa5s5c" path="res://soil.gd" id="1_7d8vc"]
+
+[node name="Soil" type="Sprite2D" unique_id=15414636]
+script = ExtResource("1_7d8vc")
