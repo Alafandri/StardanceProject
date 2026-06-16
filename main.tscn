@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://7ubum3p1qd8i" path="res://scissors.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://d0jaqgideclc0" path="res://soil.tscn" id="5_272bh"]
 [ext_resource type="PackedScene" uid="uid://d0faleyk7lwp2" path="res://water.tscn" id="6_5vw27"]
+[ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="7_272bh"]
 
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
@@ -60,6 +61,10 @@ position = Vector2(591, 504)
 [node name="Water" parent="." unique_id=928293408 instance=ExtResource("6_5vw27")]
 visible = false
 position = Vector2(803, 504)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=507553061]
+position = Vector2(161, 320)
+texture = ExtResource("7_272bh")
 
 [connection signal="pressed" from="Sprite2D/Stuff/Button" to="Sprite2D/Stuff/Button" method="_on_pressed"]
 [connection signal="pressed" from="Sprite2D/Stuff/Button2" to="Sprite2D/Stuff/Button2" method="_on_pressed"]
