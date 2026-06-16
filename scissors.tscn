@@ -3,6 +3,25 @@
 [ext_resource type="Script" uid="uid://csmeyivlvw767" path="res://scissors.gd" id="1_keus3"]
 [ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="1_xflwj"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xflwj"]
+size = Vector2(127, 126)
+
 [node name="Scissors" type="Sprite2D" unique_id=1543337738]
 texture = ExtResource("1_xflwj")
 script = ExtResource("1_keus3")
+
+[node name="Button" type="Button" parent="." unique_id=563140709]
+modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -65.0
+offset_right = 67.0
+offset_bottom = 67.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1598398455]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=399494830]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_xflwj")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

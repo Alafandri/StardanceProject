@@ -1,6 +1,47 @@
 [gd_scene format=3 uid="uid://bfy8kfdcyuiwn"]
 
 [ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="1_sxcao"]
+[ext_resource type="Script" uid="uid://bjrwnbxw2wogs" path="res://button.gd" id="2_wo0vl"]
+[ext_resource type="Script" uid="uid://c20rr4ghb13rr" path="res://button2.gd" id="3_drno8"]
 
 [node name="Test" type="Sprite2D" unique_id=683670845]
 texture = ExtResource("1_sxcao")
+
+[node name="Stuff" type="Sprite2D" parent="." unique_id=223940777]
+position = Vector2(-162.78409, -212.50018)
+scale = Vector2(0.2840909, 0.73529476)
+
+[node name="LineEdit" type="LineEdit" parent="Stuff" unique_id=862335289]
+offset_left = 389.99997
+offset_top = 295.0
+offset_right = 565.4274
+offset_bottom = 340.98563
+scale = Vector2(1.4079897, 1.0676934)
+placeholder_text = "Enter your name"
+max_length = 10
+
+[node name="Label" type="Label" parent="Stuff" unique_id=339181730]
+offset_left = 392.0
+offset_top = 234.0
+offset_right = 570.0
+offset_bottom = 271.0
+
+[node name="Button" type="Button" parent="Stuff" unique_id=950374877]
+offset_left = 679.0
+offset_top = 300.0
+offset_right = 733.0
+offset_bottom = 344.0
+text = "Enter"
+script = ExtResource("2_wo0vl")
+
+[node name="Button2" type="Button" parent="Stuff" unique_id=929002484]
+visible = false
+offset_left = 516.0
+offset_top = 290.0
+offset_right = 593.0
+offset_bottom = 334.0
+text = "contiune"
+script = ExtResource("3_drno8")
+
+[connection signal="pressed" from="Stuff/Button" to="Stuff/Button" method="_on_pressed"]
+[connection signal="pressed" from="Stuff/Button2" to="Stuff/Button2" method="_on_pressed"]
