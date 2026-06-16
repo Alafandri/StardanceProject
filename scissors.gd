@@ -19,6 +19,8 @@ func _process(_delta):
 
 func _on_button_button_down() -> void:
 	dragging = true
+	
+	z_index = 4
 
 	tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(1.25, 1.25), 0.05)
@@ -39,8 +41,10 @@ func _on_button_button_up() -> void:
 
 	rotation_degrees = 0
 
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1, 1), 0)
+	var tween3 = create_tween()
+	tween3.tween_property(self, "scale", Vector2(1, 1), 0)
+	
+	z_index = 0
 
 	end_position = global_position
 	print(end_position)
@@ -48,10 +52,10 @@ func _on_button_button_up() -> void:
 
 
 func _on_button_mouse_entered() -> void:
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1.1, 1.1), 0.1)
+	var tween4 = create_tween()
+	tween4.tween_property(self, "scale", Vector2(1.1, 1.1), 0.1)
 
 
 func _on_button_mouse_exited() -> void:
-	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(1, 1), 0.1)
+	var tween5 = create_tween()
+	tween5.tween_property(self, "scale", Vector2(1, 1), 0.1)
