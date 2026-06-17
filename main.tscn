@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://spritetest.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://7ubum3p1qd8i" path="res://scissors.tscn" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://d0jaqgideclc0" path="res://soil.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://b4o4s0r74ernw" path="res://flower.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://d0faleyk7lwp2" path="res://water.tscn" id="6_5vw27"]
-[ext_resource type="Texture2D" uid="uid://4xgobkstypon" path="res://icon.svg" id="7_272bh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
-size = Vector2(127.24707, 127.48387)
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 109
 
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
@@ -17,22 +17,41 @@ position = Vector2(573, 289)
 scale = Vector2(3.52, 1.3599988)
 
 [node name="Scissors" parent="." unique_id=1543337738 instance=ExtResource("4_7mycd")]
-position = Vector2(387, 499)
+position = Vector2(204, 600)
+scale = Vector2(1, 1)
 
 [node name="Soil" parent="." unique_id=15414636 instance=ExtResource("5_272bh")]
-position = Vector2(591, 504)
+position = Vector2(1001, 509)
 
 [node name="Water" parent="." unique_id=928293408 instance=ExtResource("6_5vw27")]
-position = Vector2(803, 504)
+position = Vector2(627, 515)
+scale = Vector2(1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=249448284]
-z_index = -1
-position = Vector2(602, 191)
-scale = Vector2(2.65625, 1.9375)
-texture = ExtResource("7_272bh")
+[node name="Flower" parent="." unique_id=1922432319 instance=ExtResource("5_lquwl")]
+position = Vector2(595, 215)
+scale = Vector2(0.69, 0.69)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1190293929]
+[node name="Label" type="Label" parent="." unique_id=509802525]
+offset_left = 455.0
+offset_top = 19.0
+offset_right = 719.0
+offset_bottom = 42.0
+text = "I want:"
+horizontal_alignment = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1936345060]
-position = Vector2(0, -0.25806427)
-shape = SubResource("RectangleShape2D_lquwl")
+[node name="Lives" type="Label" parent="." unique_id=1794794917]
+offset_left = -64.0
+offset_top = 14.0
+offset_right = 200.0
+offset_bottom = 37.0
+text = "Lives: "
+horizontal_alignment = 1
+
+[node name="Game over" type="Label" parent="." unique_id=589942671]
+visible = false
+offset_left = 269.0
+offset_top = 287.0
+offset_right = 923.0
+offset_bottom = 436.0
+text = "GAME OVER!"
+label_settings = SubResource("LabelSettings_lquwl")

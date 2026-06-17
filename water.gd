@@ -8,6 +8,8 @@ var end_position: Vector2
 var tween: Tween
 var tween2: Tween
 
+signal _signal(tool_name: String)
+
 func _ready() -> void:
 	start_position = global_position
 
@@ -49,6 +51,7 @@ func _on_button_button_up() -> void:
 	end_position = global_position
 	print(end_position)
 	position = start_position
+	_signal.emit(name)
 
 
 func _on_button_mouse_entered() -> void:
