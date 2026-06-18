@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d0jaqgideclc0"]
+
+[ext_resource type="Texture2D" uid="uid://dsx3se0qd6h7" path="res://Art/soil.png" id="1_86y54"]
+[ext_resource type="Script" uid="uid://dvqfy8mxa5s5c" path="res://Code/soil.gd" id="2_86y54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwxc0"]
+size = Vector2(183, 270)
+
+[node name="Soil" type="Sprite2D" unique_id=15414636]
+texture = ExtResource("1_86y54")
+script = ExtResource("2_86y54")
+
+[node name="Button" type="Button" parent="." unique_id=416855959]
+modulate = Color(1, 1, 1, 0)
+offset_left = -90.0
+offset_top = -135.0
+offset_right = 95.0
+offset_bottom = 137.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1364080730]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1731472725]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_cwxc0")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

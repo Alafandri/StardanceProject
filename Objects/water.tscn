@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d0faleyk7lwp2"]
+
+[ext_resource type="Texture2D" uid="uid://u4s5n0ays80a" path="res://Art/water.png" id="1_gf5bf"]
+[ext_resource type="Script" uid="uid://8mrp750pqnle" path="res://Code/water.gd" id="2_gf5bf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wcun"]
+size = Vector2(275.00006, 265.00006)
+
+[node name="Water" type="Sprite2D" unique_id=928293408]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gf5bf")
+script = ExtResource("2_gf5bf")
+
+[node name="Button" type="Button" parent="." unique_id=640865437]
+modulate = Color(1, 1, 1, 0)
+offset_left = -140.0
+offset_top = -135.0
+offset_right = 134.99997
+offset_bottom = 129.99997
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1292458049]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2019684720]
+position = Vector2(-2.5000043, -2.5000067)
+scale = Vector2(0.9999995, 0.9999995)
+shape = SubResource("RectangleShape2D_7wcun")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

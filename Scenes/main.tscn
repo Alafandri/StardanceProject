@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://b4rdlxrxcbd20"]
+
+[ext_resource type="PackedScene" uid="uid://bfy8kfdcyuiwn" path="res://Objects/spritetest.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d0ehydjyind3n" path="res://Art/square.png" id="3_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://7ubum3p1qd8i" path="res://Objects/scissors.tscn" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bllv4two75ab8" path="res://Art/Black-Circle-Fade-Sphere-PNG-No-Background.png" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://d0jaqgideclc0" path="res://Objects/soil.tscn" id="5_272bh"]
+[ext_resource type="PackedScene" uid="uid://b4o4s0r74ernw" path="res://Objects/flower.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://d0faleyk7lwp2" path="res://Objects/water.tscn" id="6_5vw27"]
+[ext_resource type="AudioStream" uid="uid://dnq280pu8ca6v" path="res://Sfx/joentnt-walk-on-dirt-1-291981.mp3" id="7_5vw27"]
+[ext_resource type="AudioStream" uid="uid://n8gftf0o13fr" path="res://Sfx/wateringcan.mp3" id="7_kek77"]
+[ext_resource type="AudioStream" uid="uid://yy64lvjwf4pd" path="res://Sfx/the-sound-designer-scissor-fast-sound-loop-a-fl-master-edited-and-final-520905.mp3" id="8_kek77"]
+[ext_resource type="AudioStream" uid="uid://b8wsa43a1jjon" path="res://Sfx/u_o8xh7gwsrj-app_interface_click_2-476372.mp3" id="10_efxa6"]
+[ext_resource type="AudioStream" uid="uid://bjq2ghdpei8ac" path="res://Sfx/freesound_community-wronganswer-37702.mp3" id="11_dg77c"]
+[ext_resource type="AudioStream" uid="uid://dic7p2nunhb3q" path="res://Sfx/universfield-new-notification-07-210334.mp3" id="12_dg77c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font_size = 109
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7mycd"]
+random_pitch = 1.0622818
+streams_count = 1
+stream_0/stream = ExtResource("7_kek77")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4c57u"]
+random_pitch = 1.0723308
+streams_count = 1
+stream_0/stream = ExtResource("7_5vw27")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_efxa6"]
+random_pitch = 1.1194189
+streams_count = 1
+stream_0/stream = ExtResource("8_kek77")
+
+[node name="Node2D" type="Node2D" unique_id=414601868]
+
+[node name="Text" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
+visible = false
+z_index = 10
+position = Vector2(573, 289)
+scale = Vector2(3.52, 1.3599988)
+
+[node name="Scissors" parent="." unique_id=1543337738 instance=ExtResource("4_7mycd")]
+position = Vector2(207, 539)
+scale = Vector2(1, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Scissors" unique_id=1964755421]
+visible = false
+z_index = -2
+position = Vector2(98, -21)
+amount = 13
+texture = ExtResource("3_ycdy4")
+lifetime = 0.84
+speed_scale = 1.3
+emission_shape = 1
+emission_sphere_radius = 33.35
+spread = 180.0
+gravity = Vector2(0, 975.79)
+initial_velocity_max = 865.08
+scale_amount_min = 0.05
+scale_amount_max = 0.1
+color = Color(0, 1, 0.0666666, 0.28627452)
+hue_variation_min = 0.12
+hue_variation_max = 0.99
+
+[node name="Soil" parent="." unique_id=15414636 instance=ExtResource("5_272bh")]
+position = Vector2(1001, 509)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Soil" unique_id=1361929432]
+visible = false
+z_index = -2
+position = Vector2(8, -154)
+amount = 5
+texture = ExtResource("3_ycdy4")
+lifetime = 0.84
+speed_scale = 1.3
+emission_shape = 3
+emission_rect_extents = Vector2(70, 20)
+spread = 180.0
+gravity = Vector2(0, 975.79)
+initial_velocity_max = 841.27
+scale_amount_min = 0.2
+scale_amount_max = 0.3
+color = Color(1, 0.35499996, 0.100000024, 0.18431373)
+hue_variation_min = 0.12
+hue_variation_max = 0.99
+
+[node name="Water" parent="." unique_id=928293408 instance=ExtResource("6_5vw27")]
+position = Vector2(601, 515)
+scale = Vector2(1, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Water" unique_id=1162995763]
+visible = false
+z_index = 5
+position = Vector2(117, -32)
+amount = 13
+texture = ExtResource("4_272bh")
+lifetime = 0.84
+speed_scale = 1.3
+emission_shape = 1
+emission_sphere_radius = 0.52
+spread = 180.0
+gravity = Vector2(0, 975.79)
+initial_velocity_max = 25.3
+scale_amount_min = 0.15
+scale_amount_max = 0.25
+color = Color(0.40529817, 0.771448, 1, 0.14117648)
+hue_variation_min = 0.12
+hue_variation_max = 0.99
+
+[node name="Flower" parent="." unique_id=1922432319 instance=ExtResource("5_lquwl")]
+position = Vector2(595, 215)
+scale = Vector2(0.69, 0.69)
+
+[node name="Label" type="Label" parent="." unique_id=509802525]
+offset_left = 455.0
+offset_top = 19.0
+offset_right = 719.0
+offset_bottom = 42.0
+text = "I want:"
+horizontal_alignment = 1
+
+[node name="Lives" type="Label" parent="." unique_id=1794794917]
+offset_left = 23.0
+offset_top = 9.0
+offset_right = 178.0
+offset_bottom = 32.0
+text = "Lives: "
+
+[node name="Game over" type="Label" parent="." unique_id=589942671]
+visible = false
+offset_left = 269.0
+offset_top = 287.0
+offset_right = 923.0
+offset_bottom = 436.0
+text = "GAME OVER!"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="Timer" type="Label" parent="." unique_id=1077793520]
+offset_left = 22.0
+offset_top = 35.0
+offset_right = 162.0
+offset_bottom = 58.0
+text = "Time:"
+
+[node name="Timer" type="Timer" parent="Timer" unique_id=1742767409]
+wait_time = 15.0
+autostart = true
+
+[node name="Score" type="Label" parent="." unique_id=351929687]
+offset_left = 1025.0
+offset_top = 39.0
+offset_right = 1146.0
+offset_bottom = 62.0
+text = "SCOREL: 0"
+
+[node name="Goal" type="Label" parent="." unique_id=2091708241]
+offset_left = 1026.0
+offset_top = 13.0
+offset_right = 1121.0
+offset_bottom = 36.0
+text = "Goal:10000"
+
+[node name="Victory" type="Label" parent="." unique_id=572197134]
+visible = false
+offset_left = 272.0
+offset_top = 248.0
+offset_right = 926.0
+offset_bottom = 397.0
+text = "VICTORY!!!!!"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="Watering" type="AudioStreamPlayer2D" parent="." unique_id=1245870134]
+stream = SubResource("AudioStreamRandomizer_7mycd")
+volume_db = 10.0
+
+[node name="Dirt" type="AudioStreamPlayer2D" parent="." unique_id=24349466]
+stream = SubResource("AudioStreamRandomizer_4c57u")
+volume_db = 10.0
+
+[node name="Cut" type="AudioStreamPlayer2D" parent="." unique_id=1198111604]
+stream = SubResource("AudioStreamRandomizer_efxa6")
+volume_db = 10.0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=172782718]
+stream = ExtResource("10_efxa6")
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="." unique_id=1523517428]
+stream = ExtResource("11_dg77c")
+volume_db = 10.0
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="." unique_id=272087490]
+stream = ExtResource("12_dg77c")
+volume_db = 10.0

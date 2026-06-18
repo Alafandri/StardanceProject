@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://duvmm30tkxrtb"]
+
+[ext_resource type="Script" uid="uid://0mdoohx6p86y" path="res://Code/playbutton.gd" id="1_3kf3n"]
+
+[node name="Menu" type="Node2D" unique_id=352187032]
+
+[node name="Button" type="Button" parent="." unique_id=1390179516]
+offset_left = 412.0
+offset_top = 307.0
+offset_right = 718.0
+offset_bottom = 338.0
+text = "Play"
+script = ExtResource("1_3kf3n")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
