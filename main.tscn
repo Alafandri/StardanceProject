@@ -13,6 +13,7 @@ font_size = 109
 
 [node name="Text" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
 visible = false
+z_index = 10
 position = Vector2(573, 289)
 scale = Vector2(3.52, 1.3599988)
 
@@ -40,12 +41,11 @@ text = "I want:"
 horizontal_alignment = 1
 
 [node name="Lives" type="Label" parent="." unique_id=1794794917]
-offset_left = -64.0
-offset_top = 14.0
-offset_right = 200.0
-offset_bottom = 37.0
+offset_left = 352.0
+offset_top = 13.0
+offset_right = 507.0
+offset_bottom = 36.0
 text = "Lives: "
-horizontal_alignment = 1
 
 [node name="Game over" type="Label" parent="." unique_id=589942671]
 visible = false
@@ -54,4 +54,38 @@ offset_top = 287.0
 offset_right = 923.0
 offset_bottom = 436.0
 text = "GAME OVER!"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[node name="Timer" type="Label" parent="." unique_id=1077793520]
+offset_left = 746.0
+offset_top = 19.0
+offset_right = 886.0
+offset_bottom = 42.0
+text = "Time:"
+
+[node name="Timer" type="Timer" parent="Timer" unique_id=1742767409]
+wait_time = 15.0
+autostart = true
+
+[node name="Score" type="Label" parent="." unique_id=351929687]
+offset_left = 1025.0
+offset_top = 39.0
+offset_right = 1146.0
+offset_bottom = 62.0
+text = "SCOREL: 0"
+
+[node name="Goal" type="Label" parent="." unique_id=2091708241]
+offset_left = 1026.0
+offset_top = 13.0
+offset_right = 1121.0
+offset_bottom = 36.0
+text = "Goal:10000"
+
+[node name="Victory" type="Label" parent="." unique_id=572197134]
+visible = false
+offset_left = 272.0
+offset_top = 248.0
+offset_right = 926.0
+offset_bottom = 397.0
+text = "VICTORY!!!!!"
 label_settings = SubResource("LabelSettings_lquwl")

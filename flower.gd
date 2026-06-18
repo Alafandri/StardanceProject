@@ -6,21 +6,40 @@ var tween2: Tween
 var lives: int = 3
 var current_request: String = ""
 
+var score = 0
+var goal = 1000 #original is 10000
+
+var time: float = 5.0
+
 func _process(_delta: float) -> void:
 	$"../Lives".text = "Lives: " + str(lives)
 	
-	if lives <= 0:
-		print("game over")
+	$"../Score".text = str(score)
+	
+	if $"../Timer/Timer".time_left > 0:
+		$"../Timer".text = str(snapped($"../Timer/Timer".time_left, 1))
 		
+	if score >= goal:
+		$"../Victory".visible = true
 		for stuff in $"..".get_children():
-			if stuff.name != "Game over":
+			if stuff.name != "Victory":
 				stuff.visible = false
-				
-		$"../Game over".visible = true
-		set_process(false)
+		
 
 func _ready() -> void:
+	$"../Timer/Timer".timeout.connect(_on_timer_timeout)
 	random_text()
+
+func trigger_game_over() -> void:
+	for stuff in $"..".get_children():
+		if stuff.name != "Game over":
+			stuff.visible = false
+			
+	$"../Game over".visible = true
+	set_process(false)
+
+func _on_timer_timeout() -> void:
+	trigger_game_over()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if tween and tween.is_running():
@@ -31,8 +50,8 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	
 	var parent = area.get_parent()
 	if parent and parent.has_signal("_signal"):
-		if not parent._signal.is_connected(_on_scissors_triggered):
-			parent._signal.connect(_on_scissors_triggered)
+		if not parent._signal.is_connected(_on_triggered):
+			parent._signal.connect(_on_triggered)
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if tween2 and tween2.is_running():
@@ -43,18 +62,20 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 	
 	var parent = area.get_parent()
 	if parent and parent.has_signal("_signal"):
-		if parent._signal.is_connected(_on_scissors_triggered):
-			parent._signal.disconnect(_on_scissors_triggered)
+		if parent._signal.is_connected(_on_triggered):
+			parent._signal.disconnect(_on_triggered)
 
-func _on_scissors_triggered(tool_name: String) -> void:
-	print("Used tool: ", tool_name)
-	
+func _on_triggered(tool_name: String) -> void:
 	if tool_name == current_request:
-		print("Correct!")
+		var new_time = $"../Timer/Timer".wait_time - 0.5
+		$"../Timer/Timer".wait_time = max(5.0, new_time)
+		$"../Timer/Timer".start()
 		random_text()
+		score += 100
 	else:
-		print("Wrong!")
 		lives -= 1
+		if lives <= 0:
+			trigger_game_over()
 
 func random_text() -> void:
 	var random_pick = randi_range(1, 3)
