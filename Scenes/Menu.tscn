@@ -1,10 +1,32 @@
 [gd_scene format=3 uid="uid://duvmm30tkxrtb"]
 
 [ext_resource type="Script" uid="uid://0mdoohx6p86y" path="res://Code/playbutton.gd" id="1_3kf3n"]
+[ext_resource type="Script" uid="uid://bjrwnbxw2wogs" path="res://Code/button.gd" id="3_ma218"]
+[ext_resource type="Texture2D" uid="uid://b5lvsby5x4otb" path="res://Art/download.webp" id="3_syfuq"]
+[ext_resource type="Script" uid="uid://c20rr4ghb13rr" path="res://Code/button2.gd" id="4_idohh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ma218"]
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_s2c3o"]
+offsets = PackedFloat32Array(0.99278843)
+colors = PackedColorArray(1, 1, 1, 0.49411765)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k12tt"]
+gradient = SubResource("Gradient_s2c3o")
 
 [node name="Menu" type="Node2D" unique_id=352187032]
 
-[node name="Button" type="Button" parent="." unique_id=1390179516]
+[node name="Download" type="Sprite2D" parent="." unique_id=922700878]
+z_index = -3
+position = Vector2(580.00006, 325)
+scale = Vector2(0.9994818, 0.99948186)
+texture = ExtResource("3_syfuq")
+metadata/_edit_lock_ = true
+
+[node name="Play" type="Button" parent="." unique_id=748931295]
+visible = false
 offset_left = 412.0
 offset_top = 307.0
 offset_right = 718.0
@@ -12,4 +34,50 @@ offset_bottom = 338.0
 text = "Play"
 script = ExtResource("1_3kf3n")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Startup" type="Node2D" parent="." unique_id=1417152055]
+
+[node name="LineEdit" type="LineEdit" parent="Startup" unique_id=1805402565]
+z_index = 2
+offset_left = 434.0
+offset_top = 362.0
+offset_right = 609.4275
+offset_bottom = 407.9856
+scale = Vector2(1.4079897, 1.0676934)
+placeholder_text = "Enter your name"
+max_length = 10
+
+[node name="Label" type="Label" parent="Startup" unique_id=1932527080]
+z_index = 2
+offset_left = 454.0
+offset_top = 304.0
+offset_right = 631.99994
+offset_bottom = 341.0
+label_settings = SubResource("LabelSettings_ma218")
+
+[node name="Button" type="Button" parent="Startup" unique_id=1760094293]
+z_index = 2
+offset_left = 695.00006
+offset_top = 366.23297
+offset_right = 749.00006
+offset_bottom = 410.23297
+text = "Enter"
+script = ExtResource("3_ma218")
+
+[node name="Button2" type="Button" parent="Startup" unique_id=1719111490]
+visible = false
+z_index = 2
+offset_left = 552.0
+offset_top = 328.0
+offset_right = 629.0
+offset_bottom = 372.0
+text = "contiune"
+script = ExtResource("4_idohh")
+
+[node name="Stuff2" type="Sprite2D" parent="Startup" unique_id=1104275648]
+position = Vector2(592, 343)
+scale = Vector2(5.4375, 2.5625005)
+texture = SubResource("GradientTexture2D_k12tt")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Startup/Button" to="Startup/Button" method="_on_pressed"]
+[connection signal="pressed" from="Startup/Button2" to="Startup/Button2" method="_on_pressed"]

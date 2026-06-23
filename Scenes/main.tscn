@@ -13,6 +13,272 @@
 [ext_resource type="AudioStream" uid="uid://b8wsa43a1jjon" path="res://Sfx/u_o8xh7gwsrj-app_interface_click_2-476372.mp3" id="10_efxa6"]
 [ext_resource type="AudioStream" uid="uid://bjq2ghdpei8ac" path="res://Sfx/freesound_community-wronganswer-37702.mp3" id="11_dg77c"]
 [ext_resource type="AudioStream" uid="uid://dic7p2nunhb3q" path="res://Sfx/universfield-new-notification-07-210334.mp3" id="12_dg77c"]
+[ext_resource type="Shader" uid="uid://bcet0i867rjuv" path="res://Other/crt.gdshader" id="14_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://b5lvsby5x4otb" path="res://Art/download.webp" id="14_k12tt"]
+[ext_resource type="Texture2D" uid="uid://c3n1ivbpixeig" path="res://Art/background1.png" id="15_wsu2k"]
+
+[sub_resource type="FontFile" id="FontFile_k12tt"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/29/0/ascent = 0.0
+cache/0/29/0/descent = 0.0
+cache/0/29/0/underline_position = 0.0
+cache/0/29/0/underline_thickness = 0.0
+cache/0/29/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/33/0/ascent = 0.0
+cache/0/33/0/descent = 0.0
+cache/0/33/0/underline_position = 0.0
+cache/0/33/0/underline_thickness = 0.0
+cache/0/33/0/scale = 1.0
+cache/0/34/0/ascent = 0.0
+cache/0/34/0/descent = 0.0
+cache/0/34/0/underline_position = 0.0
+cache/0/34/0/underline_thickness = 0.0
+cache/0/34/0/scale = 1.0
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/36/0/ascent = 0.0
+cache/0/36/0/descent = 0.0
+cache/0/36/0/underline_position = 0.0
+cache/0/36/0/underline_thickness = 0.0
+cache/0/36/0/scale = 1.0
+cache/0/37/0/ascent = 0.0
+cache/0/37/0/descent = 0.0
+cache/0/37/0/underline_position = 0.0
+cache/0/37/0/underline_thickness = 0.0
+cache/0/37/0/scale = 1.0
+cache/0/38/0/ascent = 0.0
+cache/0/38/0/descent = 0.0
+cache/0/38/0/underline_position = 0.0
+cache/0/38/0/underline_thickness = 0.0
+cache/0/38/0/scale = 1.0
+cache/0/39/0/ascent = 0.0
+cache/0/39/0/descent = 0.0
+cache/0/39/0/underline_position = 0.0
+cache/0/39/0/underline_thickness = 0.0
+cache/0/39/0/scale = 1.0
+cache/0/41/0/ascent = 0.0
+cache/0/41/0/descent = 0.0
+cache/0/41/0/underline_position = 0.0
+cache/0/41/0/underline_thickness = 0.0
+cache/0/41/0/scale = 1.0
+cache/0/43/0/ascent = 0.0
+cache/0/43/0/descent = 0.0
+cache/0/43/0/underline_position = 0.0
+cache/0/43/0/underline_thickness = 0.0
+cache/0/43/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
+cache/0/47/0/ascent = 0.0
+cache/0/47/0/descent = 0.0
+cache/0/47/0/underline_position = 0.0
+cache/0/47/0/underline_thickness = 0.0
+cache/0/47/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/52/0/ascent = 0.0
+cache/0/52/0/descent = 0.0
+cache/0/52/0/underline_position = 0.0
+cache/0/52/0/underline_thickness = 0.0
+cache/0/52/0/scale = 1.0
+cache/0/54/0/ascent = 0.0
+cache/0/54/0/descent = 0.0
+cache/0/54/0/underline_position = 0.0
+cache/0/54/0/underline_thickness = 0.0
+cache/0/54/0/scale = 1.0
+cache/0/56/0/ascent = 0.0
+cache/0/56/0/descent = 0.0
+cache/0/56/0/underline_position = 0.0
+cache/0/56/0/underline_thickness = 0.0
+cache/0/56/0/scale = 1.0
+cache/0/58/0/ascent = 0.0
+cache/0/58/0/descent = 0.0
+cache/0/58/0/underline_position = 0.0
+cache/0/58/0/underline_thickness = 0.0
+cache/0/58/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/76/0/ascent = 0.0
+cache/0/76/0/descent = 0.0
+cache/0/76/0/underline_position = 0.0
+cache/0/76/0/underline_thickness = 0.0
+cache/0/76/0/scale = 1.0
+cache/0/81/0/ascent = 0.0
+cache/0/81/0/descent = 0.0
+cache/0/81/0/underline_position = 0.0
+cache/0/81/0/underline_thickness = 0.0
+cache/0/81/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/88/0/ascent = 0.0
+cache/0/88/0/descent = 0.0
+cache/0/88/0/underline_position = 0.0
+cache/0/88/0/underline_thickness = 0.0
+cache/0/88/0/scale = 1.0
+cache/0/89/0/ascent = 0.0
+cache/0/89/0/descent = 0.0
+cache/0/89/0/underline_position = 0.0
+cache/0/89/0/underline_thickness = 0.0
+cache/0/89/0/scale = 1.0
+cache/0/83/0/ascent = 0.0
+cache/0/83/0/descent = 0.0
+cache/0/83/0/underline_position = 0.0
+cache/0/83/0/underline_thickness = 0.0
+cache/0/83/0/scale = 1.0
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/78/0/ascent = 0.0
+cache/0/78/0/descent = 0.0
+cache/0/78/0/underline_position = 0.0
+cache/0/78/0/underline_thickness = 0.0
+cache/0/78/0/scale = 1.0
+cache/0/71/0/ascent = 0.0
+cache/0/71/0/descent = 0.0
+cache/0/71/0/underline_position = 0.0
+cache/0/71/0/underline_thickness = 0.0
+cache/0/71/0/scale = 1.0
+cache/0/61/0/ascent = 0.0
+cache/0/61/0/descent = 0.0
+cache/0/61/0/underline_position = 0.0
+cache/0/61/0/underline_thickness = 0.0
+cache/0/61/0/scale = 1.0
+cache/0/57/0/ascent = 0.0
+cache/0/57/0/descent = 0.0
+cache/0/57/0/underline_position = 0.0
+cache/0/57/0/underline_thickness = 0.0
+cache/0/57/0/scale = 1.0
+cache/0/51/0/ascent = 0.0
+cache/0/51/0/descent = 0.0
+cache/0/51/0/underline_position = 0.0
+cache/0/51/0/underline_thickness = 0.0
+cache/0/51/0/scale = 1.0
+cache/0/49/0/ascent = 0.0
+cache/0/49/0/descent = 0.0
+cache/0/49/0/underline_position = 0.0
+cache/0/49/0/underline_thickness = 0.0
+cache/0/49/0/scale = 1.0
+cache/0/48/0/ascent = 0.0
+cache/0/48/0/descent = 0.0
+cache/0/48/0/underline_position = 0.0
+cache/0/48/0/underline_thickness = 0.0
+cache/0/48/0/scale = 1.0
+cache/0/46/0/ascent = 0.0
+cache/0/46/0/descent = 0.0
+cache/0/46/0/underline_position = 0.0
+cache/0/46/0/underline_thickness = 0.0
+cache/0/46/0/scale = 1.0
+cache/0/44/0/ascent = 0.0
+cache/0/44/0/descent = 0.0
+cache/0/44/0/underline_position = 0.0
+cache/0/44/0/underline_thickness = 0.0
+cache/0/44/0/scale = 1.0
+cache/0/42/0/ascent = 0.0
+cache/0/42/0/descent = 0.0
+cache/0/42/0/underline_position = 0.0
+cache/0/42/0/underline_thickness = 0.0
+cache/0/42/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsu2k"]
+font = SubResource("FontFile_k12tt")
+font_size = 34
+outline_size = 11
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
 font_size = 109
@@ -32,23 +298,41 @@ random_pitch = 1.1194189
 streams_count = 1
 stream_0/stream = ExtResource("8_kek77")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wsu2k"]
+shader = ExtResource("14_jkdf5")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 0.230000010925
+shader_parameter/blur_samples = 3
+
 [node name="Node2D" type="Node2D" unique_id=414601868]
 
-[node name="Text" parent="." unique_id=683670845 instance=ExtResource("2_0xm2m")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1240571671]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1286980140]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Text" parent="CanvasLayer/Control" unique_id=683670845 instance=ExtResource("2_0xm2m")]
 visible = false
 z_index = 10
 position = Vector2(573, 289)
 scale = Vector2(3.52, 1.3599988)
 
-[node name="Scissors" parent="." unique_id=1543337738 instance=ExtResource("4_7mycd")]
+[node name="Scissors" parent="CanvasLayer/Control" unique_id=1543337738 instance=ExtResource("4_7mycd")]
 position = Vector2(207, 539)
 scale = Vector2(1, 1)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Scissors" unique_id=1964755421]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer/Control/Scissors" unique_id=1964755421]
 visible = false
 z_index = -2
 position = Vector2(98, -21)
-amount = 13
+amount = 2
 texture = ExtResource("3_ycdy4")
 lifetime = 0.84
 speed_scale = 1.3
@@ -63,10 +347,10 @@ color = Color(0, 1, 0.0666666, 0.28627452)
 hue_variation_min = 0.12
 hue_variation_max = 0.99
 
-[node name="Soil" parent="." unique_id=15414636 instance=ExtResource("5_272bh")]
+[node name="Soil" parent="CanvasLayer/Control" unique_id=15414636 instance=ExtResource("5_272bh")]
 position = Vector2(1001, 509)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Soil" unique_id=1361929432]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer/Control/Soil" unique_id=1361929432]
 visible = false
 z_index = -2
 position = Vector2(8, -154)
@@ -85,11 +369,11 @@ color = Color(1, 0.35499996, 0.100000024, 0.18431373)
 hue_variation_min = 0.12
 hue_variation_max = 0.99
 
-[node name="Water" parent="." unique_id=928293408 instance=ExtResource("6_5vw27")]
+[node name="Water" parent="CanvasLayer/Control" unique_id=928293408 instance=ExtResource("6_5vw27")]
 position = Vector2(601, 515)
 scale = Vector2(1, 1)
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Water" unique_id=1162995763]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CanvasLayer/Control/Water" unique_id=1162995763]
 visible = false
 z_index = 5
 position = Vector2(117, -32)
@@ -108,27 +392,31 @@ color = Color(0.40529817, 0.771448, 1, 0.14117648)
 hue_variation_min = 0.12
 hue_variation_max = 0.99
 
-[node name="Flower" parent="." unique_id=1922432319 instance=ExtResource("5_lquwl")]
+[node name="Flower" parent="CanvasLayer/Control" unique_id=1922432319 instance=ExtResource("5_lquwl")]
 position = Vector2(595, 215)
 scale = Vector2(0.69, 0.69)
 
-[node name="Label" type="Label" parent="." unique_id=509802525]
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=509802525]
+layout_mode = 0
 offset_left = 455.0
 offset_top = 19.0
 offset_right = 719.0
 offset_bottom = 42.0
 text = "I want:"
+label_settings = SubResource("LabelSettings_wsu2k")
 horizontal_alignment = 1
 
-[node name="Lives" type="Label" parent="." unique_id=1794794917]
+[node name="Lives" type="Label" parent="CanvasLayer/Control" unique_id=1794794917]
+layout_mode = 0
 offset_left = 23.0
 offset_top = 9.0
 offset_right = 178.0
 offset_bottom = 32.0
 text = "Lives: "
 
-[node name="Game over" type="Label" parent="." unique_id=589942671]
+[node name="Game over" type="Label" parent="CanvasLayer/Control" unique_id=589942671]
 visible = false
+layout_mode = 0
 offset_left = 269.0
 offset_top = 287.0
 offset_right = 923.0
@@ -136,33 +424,37 @@ offset_bottom = 436.0
 text = "GAME OVER!"
 label_settings = SubResource("LabelSettings_lquwl")
 
-[node name="Timer" type="Label" parent="." unique_id=1077793520]
+[node name="Timer" type="Label" parent="CanvasLayer/Control" unique_id=1077793520]
+layout_mode = 0
 offset_left = 22.0
 offset_top = 35.0
 offset_right = 162.0
 offset_bottom = 58.0
 text = "Time:"
 
-[node name="Timer" type="Timer" parent="Timer" unique_id=1742767409]
+[node name="Timer" type="Timer" parent="CanvasLayer/Control/Timer" unique_id=1742767409]
 wait_time = 15.0
 autostart = true
 
-[node name="Score" type="Label" parent="." unique_id=351929687]
+[node name="Score" type="Label" parent="CanvasLayer/Control" unique_id=351929687]
+layout_mode = 0
 offset_left = 1025.0
 offset_top = 39.0
 offset_right = 1146.0
 offset_bottom = 62.0
 text = "SCOREL: 0"
 
-[node name="Goal" type="Label" parent="." unique_id=2091708241]
+[node name="Goal" type="Label" parent="CanvasLayer/Control" unique_id=2091708241]
+layout_mode = 0
 offset_left = 1026.0
 offset_top = 13.0
 offset_right = 1121.0
 offset_bottom = 36.0
 text = "Goal:10000"
 
-[node name="Victory" type="Label" parent="." unique_id=572197134]
+[node name="Victory" type="Label" parent="CanvasLayer/Control" unique_id=572197134]
 visible = false
+layout_mode = 0
 offset_left = 272.0
 offset_top = 248.0
 offset_right = 926.0
@@ -170,25 +462,49 @@ offset_bottom = 397.0
 text = "VICTORY!!!!!"
 label_settings = SubResource("LabelSettings_lquwl")
 
-[node name="Watering" type="AudioStreamPlayer2D" parent="." unique_id=1245870134]
+[node name="Watering" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=1245870134]
 stream = SubResource("AudioStreamRandomizer_7mycd")
 volume_db = 10.0
 
-[node name="Dirt" type="AudioStreamPlayer2D" parent="." unique_id=24349466]
+[node name="Dirt" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=24349466]
 stream = SubResource("AudioStreamRandomizer_4c57u")
 volume_db = 10.0
 
-[node name="Cut" type="AudioStreamPlayer2D" parent="." unique_id=1198111604]
+[node name="Cut" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=1198111604]
 stream = SubResource("AudioStreamRandomizer_efxa6")
 volume_db = 10.0
 
-[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=172782718]
+[node name="Click" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=172782718]
 stream = ExtResource("10_efxa6")
 
-[node name="Wrong" type="AudioStreamPlayer2D" parent="." unique_id=1523517428]
+[node name="Wrong" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=1523517428]
 stream = ExtResource("11_dg77c")
 volume_db = 10.0
 
-[node name="Correct" type="AudioStreamPlayer2D" parent="." unique_id=272087490]
+[node name="Correct" type="AudioStreamPlayer2D" parent="CanvasLayer/Control" unique_id=272087490]
 stream = ExtResource("12_dg77c")
 volume_db = 10.0
+
+[node name="Download" type="Sprite2D" parent="CanvasLayer/Control" unique_id=2019870935]
+z_index = -3
+position = Vector2(580.00006, 325)
+scale = Vector2(0.9994818, 0.99948186)
+texture = ExtResource("14_k12tt")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1679995193]
+material = SubResource("ShaderMaterial_wsu2k")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background1" type="Sprite2D" parent="CanvasLayer" unique_id=465175856]
+visible = false
+modulate = Color(0.22, 0.22, 0.22, 1)
+z_index = -2
+position = Vector2(574.2223, 323.25003)
+scale = Vector2(0.60879636, 0.60879636)
+texture = ExtResource("15_wsu2k")
+metadata/_edit_lock_ = true

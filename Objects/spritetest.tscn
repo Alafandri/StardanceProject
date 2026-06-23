@@ -19,12 +19,14 @@ offset_bottom = 340.98563
 scale = Vector2(1.4079897, 1.0676934)
 placeholder_text = "Enter your name"
 max_length = 10
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Stuff" unique_id=339181730]
 offset_left = 392.0
 offset_top = 234.0
 offset_right = 570.0
 offset_bottom = 271.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Stuff" unique_id=950374877]
 offset_left = 679.0
@@ -33,6 +35,7 @@ offset_right = 733.0
 offset_bottom = 344.0
 text = "Enter"
 script = ExtResource("2_wo0vl")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="Stuff" unique_id=929002484]
 visible = false

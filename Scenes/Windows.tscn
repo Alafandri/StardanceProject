@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://v23l6kjy1mw2"]
+
+[ext_resource type="Script" uid="uid://cn6bw5mfqjjqb" path="res://Code/start.gd" id="1_a6qut"]
+[ext_resource type="Texture2D" uid="uid://b5lvsby5x4otb" path="res://Art/download.webp" id="1_knjpe"]
+[ext_resource type="AudioStream" uid="uid://b6wm8g2oejf11" path="res://Sfx/erro.mp3" id="2_4ktgp"]
+[ext_resource type="Shader" uid="uid://bcet0i867rjuv" path="res://Other/crt.gdshader" id="2_v7wtk"]
+[ext_resource type="Texture2D" uid="uid://o5hspgf16ty0" path="res://Art/flower.png" id="3_v7wtk"]
+[ext_resource type="Script" uid="uid://6u8cwx3o5olp" path="res://Code/button (2).gd" id="4_1y6ax"]
+[ext_resource type="Script" uid="uid://d2ugcn27dutyn" path="res://Code/iconflower.gd" id="4_3q8te"]
+[ext_resource type="Texture2D" uid="uid://bjfokhsx66ps" path="res://Art/loading.png" id="5_ech37"]
+[ext_resource type="Texture2D" uid="uid://bjkh01f6tq78x" path="res://Art/1970825_65cca.png" id="7_iusyy"]
+[ext_resource type="Texture2D" uid="uid://c8rkowr31lp5g" path="res://Art/d3dsagr-6ea34890-ff20-4f5a-8e01-9610237f4e03.png" id="8_ingqs"]
+[ext_resource type="Script" uid="uid://dqxya77kh3krh" path="res://Code/exit.gd" id="9_6g0bo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ktgp"]
+font_size = 14
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("2_v7wtk")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 6
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4ktgp"]
+shader = ExtResource("2_v7wtk")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font_size = 66
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_v7wtk"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 0.14117648)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g4v7s"]
+gradient = SubResource("Gradient_v7wtk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(468.29272, 556.09753)
+
+[sub_resource type="LabelSettings" id="LabelSettings_57qmd"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yf5fn"]
+font_size = 44
+font_color = Color(0, 0, 0, 1)
+
+[node name="Windows" type="Node2D" unique_id=821392084]
+
+[node name="Start" type="Button" parent="." unique_id=972616654]
+offset_left = -3.0
+offset_top = 618.00006
+offset_right = 82.0
+offset_bottom = 651.0
+flat = true
+script = ExtResource("1_a6qut")
+
+[node name="Erro" type="AudioStreamPlayer" parent="Start" unique_id=1358054477]
+stream = ExtResource("2_4ktgp")
+
+[node name="Start2" type="Button" parent="." unique_id=652070045]
+offset_left = 1089.0
+offset_top = 618.00006
+offset_right = 1152.0
+offset_bottom = 651.0
+flat = true
+script = ExtResource("1_a6qut")
+
+[node name="Erro" type="AudioStreamPlayer" parent="Start2" unique_id=354025209]
+stream = ExtResource("2_4ktgp")
+
+[node name="Download" type="Sprite2D" parent="." unique_id=2106040070]
+z_index = -3
+position = Vector2(580.00006, 325)
+scale = Vector2(0.9994818, 0.99948186)
+texture = ExtResource("1_knjpe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=812516398]
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=1683334215]
+z_index = 1
+offset_left = 373.0
+offset_top = 350.0
+offset_right = 812.0244
+offset_bottom = 496.34143
+text = "Flower.exe"
+label_settings = SubResource("LabelSettings_4ktgp")
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=738489561]
+visible = false
+material = SubResource("ShaderMaterial_g4v7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1203688946]
+visible = false
+material = SubResource("ShaderMaterial_4ktgp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Flower" type="Sprite2D" parent="." unique_id=875156555]
+position = Vector2(588, 311)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("3_v7wtk")
+
+[node name="Label" type="Label" parent="Flower" unique_id=403995799]
+visible = false
+offset_left = -204.87805
+offset_top = 190.24391
+offset_right = 234.14636
+offset_bottom = 336.58533
+text = "Flower.exe"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Flower" unique_id=930328717]
+visible = false
+z_index = -1
+position = Vector2(9.756081, 28.04874)
+scale = Vector2(7.1646357, 8.650914)
+texture = SubResource("GradientTexture2D_g4v7s")
+
+[node name="Button" type="Button" parent="Flower/Sprite2D" unique_id=1633670872]
+z_index = 1
+offset_left = -33.361694
+offset_top = -32.0
+offset_right = 31.319153
+offset_bottom = 32.84581
+flat = true
+script = ExtResource("4_1y6ax")
+
+[node name="Loading" type="Sprite2D" parent="Flower/Sprite2D" unique_id=1304303716]
+visible = false
+z_index = 4
+position = Vector2(0, -1.5506744)
+scale = Vector2(0.4332464, 0.3699924)
+texture = ExtResource("5_ech37")
+
+[node name="Area2D" type="Area2D" parent="Flower" unique_id=14692840]
+script = ExtResource("4_3q8te")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flower/Area2D" unique_id=1735230898]
+position = Vector2(4.878174, 29.26831)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="197082565Cca" type="Sprite2D" parent="." unique_id=1315756410]
+position = Vector2(574.5, 253)
+scale = Vector2(0.8440702, 1.0338541)
+texture = ExtResource("7_iusyy")
+
+[node name="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03" type="Sprite2D" parent="." unique_id=1219128362]
+visible = false
+z_index = 1
+position = Vector2(592.00006, 317)
+scale = Vector2(0.7057761, 0.70577615)
+texture = ExtResource("8_ingqs")
+
+[node name="Label" type="Label" parent="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03" unique_id=1686020482]
+offset_left = -17.002645
+offset_top = 72.260864
+offset_right = 26.997355
+offset_bottom = 95.260864
+text = "Error!"
+label_settings = SubResource("LabelSettings_57qmd")
+
+[node name="Label" type="Label" parent="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03/Label" unique_id=203291233]
+layout_mode = 0
+offset_left = -117.60103
+offset_top = -126.10231
+offset_right = 109.09978
+offset_bottom = -65.10231
+text = "Error!"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="Exit" type="Button" parent="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03" unique_id=1217013341]
+offset_left = 192.69551
+offset_top = -127.51919
+offset_right = 238.03572
+offset_bottom = -80.76217
+flat = true
+script = ExtResource("9_6g0bo")
+
+[node name="Exit2" type="Button" parent="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03" unique_id=1754755565]
+offset_left = -79.34532
+offset_top = 58.092064
+offset_right = 85.01277
+offset_bottom = 104.84908
+flat = true
+script = ExtResource("9_6g0bo")
+
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Start2" to="Start2" method="_on_pressed"]
+[connection signal="pressed" from="Flower/Sprite2D/Button" to="Flower/Sprite2D/Button" method="_on_pressed"]
+[connection signal="mouse_entered" from="Flower/Area2D" to="Flower/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Flower/Area2D" to="Flower/Area2D" method="_on_mouse_exited"]
+[connection signal="pressed" from="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03/Exit" to="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03/Exit" method="_on_pressed"]
+[connection signal="pressed" from="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03/Exit2" to="D3Dsagr6Ea34890Ff204f5a8e019610237f4e03/Exit2" method="_on_pressed"]

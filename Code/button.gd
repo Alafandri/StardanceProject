@@ -47,7 +47,7 @@ func _on_pressed() -> void:
 		$"../LineEdit".text = ""
 		
 	else:
-		$"../Label".text = "Hello, " + $"../LineEdit".text + "!"
+		$"../Label".text = "Welcome " + $"../LineEdit".text + "!"
 		$"../LineEdit".visible = false
 		$".".visible = false
 		$"../Button2".visible = true

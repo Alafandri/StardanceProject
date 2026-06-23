@@ -1,7 +1,10 @@
-extends Node
+extends Button
+
+@export_file("*.tscn") var target_scene: String = "res://Scenes/Windows.tscn"
+
+func _ready() -> void:
+	pass
 
 func _on_pressed() -> void:
-	$"../..".visible = false
-	$"../../../Scissors".visible = true
-	$"../../../Soil".visible = true
-	$"../../../Water".visible = true
+	if target_scene != "":
+		get_tree().change_scene_to_file(target_scene)
