@@ -7,7 +7,7 @@ var lives: int = 3
 var current_request: String = ""
 
 var score = 0
-var goal = 1000 #original is 10000
+var goal = 10000 #original is 10000
 
 var time: float = 5.0
 
